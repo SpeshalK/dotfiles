@@ -1,0 +1,2 @@
+1. Fix fuzzyfinder to have access to full filesystem, not just local files.
+2. Fix lua errors in neovim when opening .jlfiles

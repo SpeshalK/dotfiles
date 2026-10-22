@@ -1,0 +1,1 @@
+require("slopo_nvim")
