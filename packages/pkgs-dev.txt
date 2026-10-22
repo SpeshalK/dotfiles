@@ -1,0 +1,31 @@
+# Developer tools to learn and adopt over time (Fedora 44)
+# Install everything:   sed 's/#.*//' pkgs-dev.txt | xargs sudo dnf install
+# Install one section:  copy its package names into `sudo dnf install ...`
+
+# --- Everyday essentials (learn first) ---
+tmux                    # persistent terminal sessions; survives dropped SSH on ARCHER2/Cirrus
+gh                      # GitHub CLI: login, repos, PRs, issues from the terminal
+btop                    # live CPU / memory / process monitor
+jq                      # query and pretty-print JSON
+
+# --- C++ quality ---
+clang                   # second compiler; catches portability issues GCC accepts
+lldb                    # LLVM debugger (alternative to gdb, pairs with clang)
+cppcheck                # static analysis, complements clang-tidy
+gcovr                   # test coverage reports (HTML/XML) from gcov data
+lcov                    # alternative coverage reporting tool
+catch2-devel            # unit testing framework (header-friendly, modern)
+gtest-devel             # GoogleTest unit testing framework
+google-benchmark-devel  # micro-benchmarks for C++ functions
+hyperfine               # benchmark whole commands from the terminal
+bear                    # generates compile_commands.json for non-CMake builds (for clangd)
+
+# --- HPC ---
+hwloc                   # `lstopo` shows core/cache/NUMA layout; useful for thread pinning
+apptainer               # HPC containers; build locally, run on ARCHER2
+fuse-sshfs              # mount remote directories (e.g. ARCHER2) locally
+mpich-devel             # second MPI implementation; test portability beyond OpenMPI
+
+# --- Workflow niceties ---
+git-delta               # syntax-highlighted, side-by-side git diffs
+ncdu                    # interactive disk-usage browser

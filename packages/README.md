@@ -16,7 +16,13 @@ sudo dnf install \
 ## 2. Packages
 
 ```bash
-grep -v '^#' pkgs-work.txt | xargs sudo dnf install
+sed 's/#.*//' pkgs-work.txt | xargs sudo dnf install
+```
+
+Developer tools to learn over time are kept separately in `pkgs-dev.txt`:
+
+```bash
+sed 's/#.*//' pkgs-dev.txt | xargs sudo dnf install
 ```
 
 ## 3. Manual installs
