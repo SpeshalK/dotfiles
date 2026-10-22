@@ -1,0 +1,81 @@
+# Work laptop package list (Fedora 44)
+# Install with:
+#   grep -v '^#' pkgs-work.txt | xargs sudo dnf install
+# Before installing, enable the COPRs (ghostty, starship) and RPM Fusion; see packages/README.md
+
+# --- 1. Sway desktop ---
+sway
+swaylock
+swayidle
+waybar
+wofi
+ghostty
+starship
+light
+udiskie
+pavucontrol
+stow
+wl-clipboard
+jetbrains-mono-fonts-all
+fontawesome4-fonts
+
+# --- 2. Terminal & shell ---
+fzf
+ripgrep
+bat
+tree
+ranger
+zsh
+zsh-autosuggestions
+zsh-syntax-highlighting
+zoxide
+
+# --- 3. Core development (C++ focus) ---
+neovim
+git
+gcc-c++
+cmake
+ninja-build
+gdb
+valgrind
+ccache
+clang-tools-extra
+perf
+openmpi-devel
+python3-devel
+python3-pip
+nodejs22
+nodejs22-npm
+curl
+unzip
+tar
+gzip
+
+# --- 5. Numerical libraries & docs ---
+hdf5
+hdf5-devel
+gsl-devel
+graphviz
+eigen3-devel
+openblas-devel
+doxygen
+
+# --- 7. Office & graphics ---
+ImageMagick
+libreoffice-writer
+libreoffice-calc
+libreoffice-impress
+inkscape
+
+# --- 8. Browsers ---
+chromium
+
+# --- 9. Backup & system ---
+btrbk
+compsize
+rpmconf
+remove-retired-packages
+
+# --- 11. Codecs (needs RPM Fusion enabled first) ---
+gstreamer1-plugins-bad-freeworld
+libheif-freeworld
