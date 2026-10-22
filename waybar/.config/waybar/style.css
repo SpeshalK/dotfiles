@@ -1,0 +1,132 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: #222222;
+    border-bottom: 3px solid rgba(100, 114, 125, 0.5);
+    color: #00eddd;
+}
+
+
+#window {
+    color: #ef1c38;
+    color: #00eddd;
+}
+
+
+#workspaces button {
+    padding: 0 5px;
+    background: transparent;
+    color: white;
+    border-bottom: 3px solid transparent;
+}
+
+#workspaces button:hover {
+    box-shadow: inherit;
+    text-shadow: inherit;
+}
+
+#workspaces button.focused {
+    /*background: #64727D;*/
+    border-bottom: 3px solid #00eddd;
+}
+
+#mode {
+    background: #db2b00;
+    color: white;
+    border-bottom: 3px solid white;
+}
+
+#clock, #battery, #cpu, #memory, #network, #pulseaudio, #custom-spotify, 
+#custom-cmus, #tray, #mode {
+    padding: 0 10px;
+    margin: 0px 2px;
+}
+
+
+#clock {
+    /*background-color: #64727D;*/
+    color: white;
+    border-bottom: 3px solid white
+}
+
+#battery {
+    background-color: transparent;
+    color: white;
+}
+
+#battery.charging {
+    color: #06db0a;
+    background-color: transparent;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: black;
+    }
+}
+
+#battery.warning:not(.charging) {
+    background: #f53c3c;
+    color: white;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#cpu {
+    background: #2ecc71;
+    color: #00eddd;
+}
+
+#memory {
+    background: transparent;
+	color: white
+}
+
+#network {
+    background: transparent;
+    color: white
+}
+
+#network.disconnected {
+    background: #f53c3c;
+}
+
+#pulseaudio {
+    background: transparent;
+    color: white;
+}
+
+#pulseaudio.muted {
+    background: #90b1b1;
+    color: #2a5c45;
+}
+
+#custom-spotify {
+    background: transparent;
+    color: white;
+}
+
+#idle_inhibitor {
+	background-color: #222222;
+	padding: 0px 10px;
+    border-bottom: 3px solid rgba(100, 114, 125, 0.5);
+}
+
+#idle_inhibitor.activated {
+		background-color: #00eddd;
+		color: #FF3A80;
+}
+
+#tray {
+    background-color: #2980b9;
+}
