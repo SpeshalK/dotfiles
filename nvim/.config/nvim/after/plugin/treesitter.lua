@@ -1,29 +1,21 @@
-require'nvim-treesitter.configs'.setup {
-  -- Add the languages you use for research
-  ensure_installed = { 
-    "python", 
-    "julia", 
-    "cpp", 
-    "bash", 
-    "lua", 
-    "vim", 
-    "vimdoc", 
-    "markdown", 
-    "markdown_inline", 
-    "latex", -- Helpful if you write papers in Neovim
-    "c", 
-    "rust" 
-  },
+-- nvim-treesitter `main` branch (the old `master` setup{} API is gone).
+-- Parsers are compiled locally: needs `tree-sitter-cli` and a C compiler.
 
-  sync_install = false,
-  auto_install = true,
-
-  highlight = {
-    enable = true,
-    additional_vim_regex_highlighting = false,
-  },
-
-  indent = {
-    enable = true
-  },
+local parsers = {
+    "c", "cpp", "bash", "lua", "vim", "vimdoc",
+    "markdown", "markdown_inline", "python", "latex", "rust",
 }
+if vim.fn.executable("julia") == 1 then
+    table.insert(parsers, "julia")
+end
+
+require("nvim-treesitter").install(parsers)
+
+-- Highlighting and indentation: switched on per buffer when a parser exists
+vim.api.nvim_create_autocmd("FileType", {
+    callback = function(args)
+        if pcall(vim.treesitter.start, args.buf) then
+            vim.bo[args.buf].indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+        end
+    end,
+})
