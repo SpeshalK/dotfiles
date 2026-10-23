@@ -32,6 +32,7 @@ zoxide
 
 # --- 3. Core development (C++ focus) ---
 neovim
+tree-sitter-cli
 git
 gcc-c++
 cmake
