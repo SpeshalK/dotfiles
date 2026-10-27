@@ -27,7 +27,7 @@ set $music 'flatpak run com.spotify.Client'
 # Lock config
 set $swaylock ~/.config/sway/swayscripts/swaylock/locker.sh
 # Wallpaper
-set $wallpaper ~/Pictures/Wallpapers/Shine.jpg
+set $wallpaper ~/Pictures/Wallpapers/blue-grain.jpg
 # Outputs
 set $screen1 eDP-1
 set $screen2 HDMI-A-1
@@ -65,7 +65,7 @@ output HDMI-A-1 resolution 1920x1080 position 0,0
 #
 # Touchpad Configuration:
 #
-    input "1267:14:Elan_Touchpad" {
+    input "1267:14:touchpad" {
         dwt enabled
         tap enabled
         natural_scroll enabled
