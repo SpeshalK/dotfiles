@@ -65,7 +65,7 @@ output HDMI-A-1 resolution 1920x1080 position 0,0
 #
 # Touchpad Configuration:
 #
-    input "1267:14:touchpad" {
+    input type:touchpad {
         dwt enabled
         tap enabled
         natural_scroll enabled
@@ -163,7 +163,7 @@ bindsym $mod+x exec $swaylock
     bindsym $mod+Up focus up
     bindsym $mod+Right focus right
 
-    # _move_ the focused wiSYNA7DB5:00 06CB:7DB7 Touchpadndow with the same, but add Shift
+    # _move_ the focused window with the same, but add Shift
     bindsym $mod+Shift+$left move left
     bindsym $mod+Shift+$down move down
     bindsym $mod+Shift+$up move up
@@ -174,7 +174,7 @@ bindsym $mod+x exec $swaylock
     bindsym $mod+Shift+Up move up
     bindsym $mod+Shift+Right move right
 
-    # _move_ the focused wiSYNA7DB5:00 06CB:7DB7 Touchpadndow with the same, but add Shift
+    # _move_ the focused window with the same, but add Shift
     bindsym $mod+Control+1 move workspace to output $screen1
     bindsym $mod+Control+2 move workspace to output $screen2
     bindsym $mod+Control+3 move workspace to output $screen3
