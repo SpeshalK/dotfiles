@@ -46,4 +46,5 @@ require("lazy").setup({
     { "JuliaEditorSupport/julia-vim", cond = vim.fn.executable("julia") == 1 },
 }, {
     change_detection = { notify = false },
+    rocks = { enabled = false },
 })
